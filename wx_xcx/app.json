@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/videoInfo/videoInfo",
+    "pages/videotest/videotest",
+    "pages/index/index",
+    "pages/test/test",
+    "pages/report/report",
+    "pages/searchVideo/searchVideo",
+    "pages/userLogin/login",
+    "pages/chooseBgm/chooseBgm",
+    "pages/mine/mine",
+    "pages/userRegist/regist"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AA",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "debug": true
+}

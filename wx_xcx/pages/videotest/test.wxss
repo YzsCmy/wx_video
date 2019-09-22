@@ -1,0 +1,580 @@
+/* pages/videotest/test.wxss */
+page {
+  width: 100%;
+  height: 100%;
+}
+.video{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.z_index{
+  z-index: 7;
+}
+.replywidth{
+  width: 500rpx;
+  word-break: break-all;
+}
+.secondValue{
+  position: absolute;
+background: red;
+width: 100%;
+top: 0;
+bottom: 0;
+opacity: 0;
+}
+.video-logo-more{
+  width: 12rpx;
+  height: 10rpx;
+}
+.video-shop {
+  width: 100%;
+  height: 100%;
+  /* background: url('https://p6.suibianyuming.com.cn/1565167944sl073101zbbanner.png') no-repeat; */
+  /* background-size: 100% 100%; */
+  position: relative;
+}
+
+.video-shop-cate {
+  position: absolute;
+  right: 32rpx;
+  top: 600rpx;
+}
+
+.shop-item {
+  margin-top: 28rpx;
+}
+
+.shop-item image {
+  width: 64rpx;
+  height: 56rpx;
+}
+
+.shop-item-text {
+  font-size: 28rpx;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+.video-look-shop {
+  width: 306rpx;
+  height: 48rpx;
+  background: linear-gradient(45deg, rgba(33, 212, 253, 1) 0%, rgba(183, 33, 255, 1) 100%);
+  opacity: 1;
+  border-radius: 24rpx;
+  font-size: 24rpx;
+  color: white;
+  text-align: center;
+  line-height: 48rpx;
+}
+
+.video-look-shop image {
+  width: 28rpx;
+  height: 30rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.item-info-zindex {
+  display: flex;
+  line-height: 80rpx;
+  margin-top: 24rpx;
+}
+
+.info-zindex-image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.goods-title {
+  color: white;
+}
+
+.goods-attent {
+  width: 102rpx;
+  height: 40rpx;
+  background: rgba(244, 103, 103, 1);
+  opacity: 1;
+  border-radius: 24rpx;
+  color: white;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  margin: 20rpx 0rpx 0 20rpx;
+}
+
+.goods-attent image {
+  width: 100%;
+  height: 100%;
+  /* margin-left: 20rpx; */
+}
+
+.item-info-text {
+  color: white;
+  font-size: 28rpx;
+  margin-top: 24rpx;
+}
+
+.video-shop-info {
+  padding: 50rpx 32rpx;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.video-shop-cammera {
+  position: absolute;
+  right: 32rpx;
+  top: 160rpx;
+  padding-left: 100rpx;
+}
+
+.shop-cammars {
+  width: 40rpx;
+  height: 27rpx;
+  display: inline-block;
+}
+.shop-share-back{
+  margin-top: 10rpx;
+  width: 64rpx;
+  height: 64rpx;
+  background: rgba(0, 0, 0, 0.16);
+  border-radius: 50%;
+  opacity: 1;
+  display: flex;
+  text-align: center;
+  margin:0 30rpx;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 74rpx;
+}
+
+.shop-share-shandom {
+  width: 64rpx;
+  height: 64rpx;
+  background: rgba(0, 0, 0, 0.16);
+  border-radius: 50%;
+  opacity: 1;
+  display: flex;
+  text-align: center;
+  margin-left: 26rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-share {
+  width: 33rpx;
+  height: 33rpx;
+  margin-top: 16rpx;
+}
+
+.video-attenet-shops {
+  color: #333;
+  font-size: 34rpx;
+  margin-bottom: 16rpx;
+  font-weight: 500;
+}
+
+.video-recommend-shops {
+  background: white;
+  padding: 24rpx 16rpx;
+  width: 650rpx;
+  background: rgba(255, 255, 255, 1);
+  opacity: 1;
+  border-radius: 20rpx;
+  position: absolute;
+  left: 3%;
+  transform: translateX(-50%);
+  bottom: 46rpx;
+
+}
+
+.attent-shop {
+  display: flex;
+}
+
+.attent-shop-img {
+  width: 164rpx;
+  height: 164rpx;
+  border-radius: 20rpx;
+}
+.back-icon {
+  width: 20rpx;
+  height: 33rpx;
+}
+.attent-shop-right {
+  margin-left: 24rpx;
+  padding-top: 10rpx;
+}
+
+.shop-right-title {
+  font-size: 28rpx;
+  color: #333;
+  width: 380rpx;
+  margin-bottom: 10rpx;
+}
+
+.shop-price {
+  color: #f46767;
+  font-size: 34rpx;
+}
+
+.shop-buy {
+  width: 148rpx;
+  height: 48rpx;
+  background: linear-gradient(44deg, rgba(33, 212, 253, 1) 0%, rgba(183, 33, 255, 1) 100%);
+  opacity: 1;
+  border-radius: 24rpx;
+  text-align: center;
+  line-height: 48rpx;
+  color: white;
+  font-size: 24rpx;
+}
+
+.shop-look-people {
+  font-size: 20rpx;
+  color: #999;
+}
+
+.shop-close {
+  width: 45rpx;
+  height: 45rpx;
+  position: absolute;
+  top: 14rpx;
+  right: 14rpx;
+}
+
+.video-share-bg {
+  width: 100%;
+  height: 388rpx;
+  background: url(https://p6.suibianyuming.com.cn/ct/video/shop/share-bg) no-repeat;
+  opacity: 0.99;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.video-comment-bg {
+  width: 100%;
+  height: 822rpx;
+  background: url(https://p6.suibianyuming.com.cn/ct/video/shop/comment) no-repeat;
+  opacity: 0.96;
+  position: fixed;
+  bottom: 0;
+  z-index: 4;
+}
+
+.video-share-box {
+  width: 100%;
+  height: 388rpx;
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+}
+
+.video-border {
+  width: 686rpx;
+  height: 1px;
+  background: rgba(199, 199, 199, 1);
+  margin: 0 auto;
+}
+
+.video-share-close {
+  width: 45rpx;
+  height: 45rpx;
+  position: absolute;
+  top: 15rpx;
+  right: 15rpx;
+}
+
+.video-share-title {
+  text-align: center;
+  color: white;
+  font-size: 34rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.viode-share-flex {
+  display: flex;
+  justify-content: space-around;
+  padding: 64rpx 116rpx;
+  text-align: center;
+}
+
+.viode-share-flex image {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.viode-share-flex view {
+  color: white;
+  font-size: 28rpx;
+}
+
+.video-comment-box {
+  width: 100%;
+  height: 822rpx;
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+}
+
+.comment-box-text {
+  font-size: 28rpx;
+  color: white;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding-left: 32rpx;
+}
+
+.color-c7 {
+  color: #c7c7c7;
+}
+
+.comment-item-box1-l {
+  display: flex;
+  /* padding: 32rpx; */
+}
+
+.comment-item-right {
+  flex: 1
+}
+
+.comment-item-left {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 16rpx;
+}
+
+.comment-name {
+  font-size: 24rpx;
+  color: #c7c7c7;
+}
+
+.comment-time {
+  font-size: 20rpx;
+  color: #c7c7c7;
+}
+
+.comment-comtent {
+  font-size: 28rpx;
+  color: white;
+  margin-top: 12rpx;
+  position: relative;
+  width: 500rpx;
+}
+
+.comment-s-box-list {
+  width: 566rpx;
+  height: auto;
+  float: right;
+  margin-top: 10rpx;
+  border-radius: 20rpx;
+  background: rgba(116, 116, 116, 0.3);
+  /* padding-bottom: 12rpx; */
+}
+
+.comment-item-box-s {
+  /* height:196rpx; */
+  display: flex;
+  padding: 16rpx 24rpx;
+}
+
+.comment-item-left-s {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  margin-right: 8rpx;
+}
+
+.comment-box {
+  padding: 32rpx;
+  box-sizing: border-box;
+}
+
+.scroll-box {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.comment-item-right-s {
+  flex: 1;
+}
+
+.comment-name-s {
+  font-size: 20rpx;
+  color: #999;
+  /* margin-top: 10rpx; */
+  
+}
+
+.comment-comtent-s {
+  color: white;
+  font-size: 24rpx;
+  margin-top: 12rpx;
+  word-break: break-all;
+}
+
+.comment-list {
+  position: relative;
+  width: 100%;
+  margin-bottom: 18rpx;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.view-shop-input {
+  width: 100%;
+  height: 86rpx;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  bottom: 0;
+  z-index: 11;
+}
+
+.view-shop-input image {
+  width: 46rpx;
+  height: 44rpx;
+  position: absolute;
+  top: 22rpx;
+  left: 56rpx;
+}
+
+.view-shop-input input {
+  width: 686rpx;
+  height: 68rpx;
+  background: rgba(44, 43, 42, 1);
+  border-radius: 40rpx;
+  margin: 10rpx auto;
+  padding-left: 78rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.comment-more {
+  font-size: 22rpx;
+  color: #999;
+  margin-top: 12rpx;
+  margin-left: -44rpx;
+}
+
+.comment-more-small{
+  font-size: 22rpx;
+  color: #999;
+  margin-left: 34rpx;
+  margin-bottom: 12rpx;
+}
+.button-sahre{
+  margin: 0;
+  line-height: 0;
+  background: transparent;
+  margin-bottom: 10rpx;
+  border: 0;
+  position: static;
+}
+
+@-webkit-keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated.delay-1s {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+button::after {
+  border: none;
+  width: 0;
+  height: 0;
+}
+
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}

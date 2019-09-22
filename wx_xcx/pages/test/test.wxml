@@ -1,0 +1,7 @@
+<!-- <view style='width:100%;height:100%;'> -->
+
+<video src="http://127.0.0.1:8081/180425CFA4RB6T0H/video/tmp_61db50ec11e8642bf4665b20635cfad6376a76113aa1a0bf.mp4"
+controls="{{false}}"
+muted="{{true}}"
+></video>
+<!-- </view> -->

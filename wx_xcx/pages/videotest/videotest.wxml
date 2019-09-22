@@ -1,0 +1,150 @@
+<view class="container" catchtap="pause">
+
+  <!-- wx:key="{{item.coverPath}} -->
+  <view class="animation-wrapper" animation="{{animation}}">
+    <block wx:for="{{videosData}}">
+      <view class="animation-image-wrapper">
+        <image class="animation-image" src="{{serverUrl}}/{{item.coverPath}}"></image>
+      </view>
+    </block>
+  </view>
+
+  <video class="vvideo" bindtimeupdate="bindtimeupdate" bindtouchstart="touchStart" bindtouchend="touchEnd" bindtouchcancel="touchCancel" hidden="{{animationShow}}" controls="{{false}}" id="myVideo" autoplay="{{true}}" enable-progress-gesture="{{false}}"
+    objectFit="{{cover}}" hidden="{{animationShow}}" src="{{serverUrl}}/{{videosData[currentIndex].videoPath}}" loop="{{true}}">
+    <cover-view class='search'>
+      <!-- 搜索按钮 -->
+      <cover-image src='../resource/images/search.png' style='width:45rpx;height:45rpx;' bindtap='showSearch'></cover-image>
+    </cover-view>
+
+    <cover-view class="tools">
+
+      <!-- 用户头像 -->
+      <cover-view class='user-image'>
+        <cover-image class="userinfo-avatar" catchtap='goUserHome' src="{{publisher.faceImage==null?'../resource/images/noneface.png':serverUrl+'/'+publisher.faceImage}}"></cover-image>
+        <cover-image class="userinfo-add" wx:if="{{(!isMe)&&(!isfans)}}" src="../resource/images/add.png" catchtap='addFans'></cover-image>
+        <cover-image class="userinfo-add" wx:if="{{(!isMe)&&(isfans)}}" src="../resource/images/guanzhu.png" catchtap='deleteFans'></cover-image>
+      </cover-view>
+      <!-- 点赞 -->
+      <cover-view catchtap="likeVideoOrNot">
+        <cover-image class="icon right-icon" wx:if="{{userLikeVideo}}" src='../resource/images/active.png'></cover-image>
+        <cover-image class="icon right-icon" wx:else src='../resource/images/start.png'></cover-image>
+        <cover-view class="text">{{likeNum}}</cover-view>
+      </cover-view>
+      <!-- 评论 -->
+      <cover-view catchtap='showComments'>
+        <cover-image class="icon right-icon" src='../resource/images/content.png' bindtap="leaveComment"></cover-image>
+        <cover-view class="text">{{commentTotalRecords}}</cover-view>
+      </cover-view>
+      <!-- 分享 -->
+      <cover-view>
+        <cover-image class="icon right-icon share" src='../resource/images/share.png' catchtap='shareMe'></cover-image>
+      </cover-view>
+    </cover-view>
+
+
+
+    <!-- 进度条  -->
+    <cover-view class="jindu-back"></cover-view>
+    <cover-view class="jindu" style='width: {{percent}}%'></cover-view>
+
+
+    <!-- 底部 -->
+    <cover-view class="footer">
+      <cover-view class='apply apply-active'>
+        <cover-view>首页</cover-view>
+      </cover-view>
+      <cover-view class='apply' catchtap='goFollow'>
+        <cover-view>关注</cover-view>
+      </cover-view>
+      <cover-view class='apply' catchtap='goAddVideo'>
+        <cover-image class="icon" src='../resource/images/addVideo.png' bindtap='apply'></cover-image>
+      </cover-view>
+      <cover-view class='apply' catchtap='goSearch'>
+        <cover-view>发现</cover-view>
+      </cover-view>
+      <cover-view class='apply' catchtap='showMine'>
+        <cover-view>我的</cover-view>
+      </cover-view>
+    </cover-view>
+  </video>
+  <!-- 视频描述  -->
+  <cover-view class='container-words'>
+    <cover-view>@{{publisher.nickname}}</cover-view>
+    <cover-view class='video-desc'>{{videoInfo.videoDesc}}</cover-view>
+  </cover-view>
+
+  <!-- 评论  -->
+  <view class='talks-layer' animation='{{talksAnimationData}}'>
+    <!-- 主要作用是点击后隐藏评论区  -->
+    <view class='layer-white-space' catchtap='hideTalks'>
+    </view>
+    <!-- 评论区  -->
+    <view class='talks'>
+      <!-- 评论头部  -->
+      <view class='talk-header' catchtap='hideTalks'>
+        <view class='talk-count'>{{commentTotalRecords}} 条评论</view>
+        <image src='../resource/images/close.png' class='talk-close'></image>
+      </view>
+      <view class='talk-footer'>
+        <input class='talk-input' name="commentContent" placeholder="{{placeholder}}" confirm-type="send" bindconfirm="saveComment" focus='{{commentFocus}}' value='{{contentValue}}' data-replyFatherCommentId='{{replyFatherCommentId}}' data-replyToUserId='{{replyToUserId}}'></input>
+      </view>
+      <!-- 评论体  -->
+      <scroll-view class='talk-body' scroll-y="true" bindscrolltolower="onScrollLoad">
+        <block wx:for="{{commentsList}}" wx:key='{{index}}'>
+          <view class='talk-item' bindtap='replyFocus' data-fatherCommentId='{{item.id}}' data-toUserId='{{item.fromUserId}}' data-toNickname='{{item.nickname}}'>
+            <view class='talk-item-left'>
+              <image class='talk-item-face' wx:if="{{item.faceImage==null}}" src="../resource/images/noneface.png"></image>
+              <image class='talk-item-face' wx:else src='{{serverUrl}}/{{item.faceImage}}'></image>
+            </view>
+            <view class='talk-item-right'>
+              <text class='talk-item-nickname'>{{item.nickname}}</text>
+              <text class='talk-item-content'>{{item.comment}}</text>
+              <text class='talk-item-time'>{{item.timeAgoStr}}</text>
+              <view bindtap="showSecondComments" class="talk-item-time" bindtap="showSecondComments" data-ids="{{item.id}}" data-idx="{{index}}" 
+              wx:if="{{(!item.second) && (item.hasChild==1)}}">—— 展开回复
+                <image src="../resource/images/next.png" class="video-logo-more"></image>
+              </view>
+
+            </view>
+
+          </view>
+
+
+                                                              <!-- change -->
+          <scroll-view scroll-y class="comment-s-box-list" id="{{index}}" wx:if="{{item.second}}">
+            <block wx:for="{{item.secondList}}">
+              <view class='talk-item' bindtap='replyFocus' data-fatherCommentId='{{item.fatherCommentId}}' data-toUserId='{{item.fromUserId}}' data-toNickname='{{item.nickname}}'>
+                <view class='talk-item-left'>
+                  <image class='talk-item-face' wx:if="{{item.faceImage==null}}" src="../resource/images/noneface.png"></image>
+                  <image class='talk-item-face' wx:else src='{{serverUrl}}/{{item.faceImage}}'></image>
+                </view>
+                <view class='talk-item-right'>
+                  <text class='talk-item-nickname'>{{item.nickname}}</text>
+                  <text class='talk-item-content'>{{item.comment}}</text>
+                  <text class='talk-item-time'>{{item.timeAgoStr}}</text>
+                  
+                </view>
+              </view>
+            </block>
+          </scroll-view>
+          <view class="talk-item-time"
+                  wx:if="{{item.second}}"
+                  data-idx="{{index}}"  
+                  bindtap="loseSecondComment">—— 收起
+                    <image src="../resource/images/up.png" class="video-logo-more"></image>
+                  </view>
+        </block>
+      </scroll-view>
+      <view class="weui-loadmore weui-loadmore_line" wx:if='{{hasmoreData}}'>
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无更多数据</view>
+      </view>
+      <view class="weui-loadmore" wx:if="{{hiddenloading}}">
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">正在加载</view>
+      </view>
+      <!-- 评论底部  -->
+    </view>
+  </view>
+</view>
+
+<image class="play-btn" wx:if="{{isPause && btnShow}}" bindtap="play" src="../resource/images/play.png"></image>

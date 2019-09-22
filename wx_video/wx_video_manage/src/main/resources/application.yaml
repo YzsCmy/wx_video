@@ -1,0 +1,10 @@
+spring:
+  thymeleaf:
+    enabled: false
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /WEB-INF/center/
+server:
+  servlet-path: '*.action'
+

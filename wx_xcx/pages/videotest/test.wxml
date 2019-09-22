@@ -1,0 +1,53 @@
+
+
+<scroll-view scroll-y style="height: 640rpx;" scroll-into-view="t{{commentScrollId}}" bindscrolltolower="onPullDown" scroll-top="{{toHeight}}">
+  <view class="comment-box">
+    <view class="comment-list clearfix" wx:for="{{commentsList}}" wx:key="index" id="t{{index}}">
+      <view class="comment-item-box1-l" 
+      wx:if="{{item.fatherCommentId==undefined||item.fatherCommentId==null||item.fatherCommentId==''}}">
+        <image class="comment-item-left " src="{{serverUrl}}/{{item.faceImage}} "></image>
+        <view class="comment-item-right">
+          <view bindtap="replyInfo" data-name="{{item.nickname}}" data-idx="{{index}}" data-id="{{item.id}}">
+            <view class="comment-name ">{{item.nickname}}</view>
+            <view class="comment-time ">{{item.timeAgoStr}}</view>
+            <view class="comment-comtent">
+              <text class="  replywidth">{{item.comment}}</text>
+            </view>
+          </view>
+
+          <view class="comment-more" bindtap="getMoreComment" data-idx="{{index}}" data-id="{{item.id}}" wx:if="{{item.hasChild==1}}">—— 展开回复
+            <image src="https://p6.suibianyuming.com.cn/ct/video/shopmore.png" class="video-logo-more"></image>
+          </view>
+        </view>
+      </view>
+<!-- 
+
+      <scroll-view scroll-y class="comment-s-box-list">
+        <view class="comment-item-box-s" wx:for="{{item.secondList}}" wx:for-item="items" wx:key="idx">
+          <image class="comment-item-left-s " src="{{items.headimgurl}} "></image>
+          <view class="comment-item-right-s ">
+            <view class="comment-name-s ">{{items.nickname}}</view>
+            <view class="comment-name-s ">{{items.addtime}}</view>
+            <view class="comment-comtent-s ">{{items.content}}</view>
+          </view>
+        </view>
+
+        <view class="comment-more-small" wx:if="{{item.isMorePage && item.secondList  && item.secondList.length != 0 }}" data-idx="{{index}}" data-id="{{item.id}}" bindtap="getSecondComment">—— 展开更多回复
+          <image src="https://p6.suibianyuming.com.cn/ct/video/shopmore.png" class="video-logo-more"></image>
+        </view>
+
+        <view class="comment-more-small" data-idx="{{index}}" wx:elif="{{!item.isMorePage && item.secondList && item.secondList.length != 0 }}" data-id="{{item.id}}" bindtap="loseSecondComment">—— 收起
+          <image src="https://p6.suibianyuming.com.cn/ct/video/shopmore.png" class="video-logo-more"></image>
+        </view>
+
+        <view class="clear"></view>
+      </scroll-view>
+ -->
+    </view>
+  </view>
+</scroll-view>
+<view class="view-shop-input" wx:if="{{true}}">
+  <image src="https://p6.suibianyuming.com.cn/ct/video/shopcomment.png"></image>
+  <input placeholder="献上你的一条热评" value="{{commentValue}}" data-id="0" bindconfirm="confirmInput" bindinput="getCommentValue" maxlength="100" wx:if="{{isCommentOwn}}" confirm-type="confirm" bindfocus="getFocus" adjust-position="false"></input>
+  <input placeholder="{{ commentPeople}}" value="{{commentValue}}" data-id="1" bindconfirm="confirmInput" bindinput="getCommentValue" focus="{{focus}}" bindblur="blurSecondInput" maxlength="100" wx:else confirm-type="confirm" bindfocus="getFocus" adjust-position="false"> </input>
+</view>
