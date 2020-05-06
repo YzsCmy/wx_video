@@ -8,8 +8,11 @@
 
 
 
-![YEQxt1.jpg](https://s1.ax1x.com/2020/05/06/YEQxt1.jpg)
-![YEQvkR.jpg](https://s1.ax1x.com/2020/05/06/YEQvkR.jpg)
+<div id="content">
+<img src="https://s1.ax1x.com/2020/05/06/YEQxt1.jpg" width = "300" height = "500"  />
+<img src="https://s1.ax1x.com/2020/05/06/YEQvkR.jpg" width = "300" height = "500"  />
+<img src="https://s1.ax1x.com/2020/05/06/YE8u1x.gif" width = "300" height = "500"  />
+</div>
 
 
 #### 在小程序的短视频界面实现上下滑动屏幕切换视频，
