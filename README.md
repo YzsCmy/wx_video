@@ -8,8 +8,8 @@
 
 
 
-![image](https://github.com/YzsCmy/wx_video/blob/master/img/aa.jpg)![image](https://github.com/YzsCmy/wx_video/blob/master/img/bb.jpg)
-
+![YEQxt1.jpg](https://s1.ax1x.com/2020/05/06/YEQxt1.jpg)
+![YEQvkR.jpg](https://s1.ax1x.com/2020/05/06/YEQvkR.jpg)
 
 
 #### 在小程序的短视频界面实现上下滑动屏幕切换视频，
