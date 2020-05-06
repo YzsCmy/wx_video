@@ -8,7 +8,7 @@
 
 
 
-![image](https://github.com/YzsCmy/wx_video/raw/master/img/aa.jpg)![image](https://github.com/YzsCmy/wx_video/raw/master/img/bb.jpg)
+![aa](https://github.com/YzsCmy/wx_video/raw/master/img/aa.jpg)![bb](https://github.com/YzsCmy/wx_video/raw/master/img/bb.jpg)
 
 
 
