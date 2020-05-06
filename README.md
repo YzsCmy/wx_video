@@ -8,7 +8,7 @@
 
 
 
-![image](https://github.com/YzsCmy/wx_video/blob/master/gif/aa.jpg)![image](https://github.com/YzsCmy/wx_video/blob/master/gif/bb.jpg)
+![image](https://github.com/YzsCmy/wx_video/blob/master/img/aa.jpg)![image](https://github.com/YzsCmy/wx_video/blob/master/img/bb.jpg)
 
 
 
